@@ -24,18 +24,11 @@ namespace ConsoleApplication
 
 
             //Prompt for exit
-            Console.WriteLine("Press any key to exit");
-            Console.ReadKey();
-            //Console.WriteLine("Thank you. GoodBye!");
-            Environment.Exit(0);
-        
+            Console.Write("Press any key to exit");
+            Console.ReadKey();      
 
         }
 
-        private static void consoleMsg(string msg)
-        {
-            Console.WriteLine(msg);
-        }
         private static void GetUser()
         {
             string userName, userLocation;
