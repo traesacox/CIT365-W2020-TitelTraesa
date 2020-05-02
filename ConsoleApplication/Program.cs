@@ -31,6 +31,7 @@ namespace ConsoleApplication
 
         private static void GetUser()
         {
+            //declare variable
             string userName, userLocation;
 
             Console.WriteLine("What is your name:");
