@@ -51,6 +51,7 @@ namespace Traesa_Titel_Math_Quiz
             timeLabel.BackColor = Color.Gold;
 
             //Reset ttlRight to 0
+            numRight = 0;
             ttlRight.Text = "Total Correct: " + numRight;
 
 
@@ -198,14 +199,36 @@ namespace Traesa_Titel_Math_Quiz
             }
         }
 
+        private void sum_ValueChanged(object sender, EventArgs e)
+        {
+            if (addend1 + addend2 == sum.Value)
+            {
+                sum.ForeColor = Color.Green;
+                if (timeLeft > 0)
+                {
+                    numRight++;
+                    ttlRight.Text = "Total Correct: " + numRight;
+                }
+            }
+            else
+            {
+                sum.ForeColor = Color.Red;
+            }
+
+        }
+
         private void difference_ValueChanged(object sender, EventArgs e)
         {
             if(minuend - subtrahend == difference.Value)
             { 
                 difference.ForeColor = Color.Green;
-                numRight++;
-                ttlRight.Text = "Total Correct: " + numRight;
-            }else
+                if (timeLeft > 0)
+                {
+                    numRight++;
+                    ttlRight.Text = "Total Correct: " + numRight;
+                }
+            }
+            else
             {
                 difference.ForeColor = Color.Red;
             }
@@ -232,8 +255,53 @@ namespace Traesa_Titel_Math_Quiz
 
         }
 
+        private void product_ValueChanged(object sender, EventArgs e)
+        {
+            if (multiplicand * multiplier == product.Value)
+            {
+                product.ForeColor = Color.Green;
+                if (timeLeft > 0)
+                {
+                    numRight++;
+                    ttlRight.Text = "Total Correct: " + numRight;
+                }
+            }
+            else
+            {
+                product.ForeColor = Color.Red;
+            }
+        }
 
+        private void quotient_ValueChanged(object sender, EventArgs e)
+        {
+            if (dividend / divisor == quotient.Value)
+            {
+                quotient.ForeColor = Color.Green;
+                if (timeLeft > 0)
+                {
+                    numRight++;
+                    ttlRight.Text = "Total Correct: " + numRight;
+                }
+            }
+            else
+            {
+                quotient.ForeColor = Color.Red;
+            }
+        }
 
+        private void sum_ValueChanged_1(object sender, EventArgs e)
+        {
+            if (addend1 + addend2 == sum.Value)
+            {
+                sum.ForeColor = Color.Green;
+                numRight++;
+                ttlRight.Text = "Total Correct: " + numRight;
+            }
+            else
+            {
+                sum.ForeColor = Color.Red;
+            }
 
+        }
     }
 }
