@@ -41,6 +41,7 @@
             this.deliveryTime = new System.Windows.Forms.ComboBox();
             this.width = new System.Windows.Forms.NumericUpDown();
             this.depth = new System.Windows.Forms.NumericUpDown();
+            this.btnGetQuote = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.drawerCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.width)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.depth)).BeginInit();
@@ -171,11 +172,21 @@
             this.depth.Size = new System.Drawing.Size(120, 20);
             this.depth.TabIndex = 3;
             // 
+            // btnGetQuote
+            // 
+            this.btnGetQuote.Location = new System.Drawing.Point(107, 405);
+            this.btnGetQuote.Name = "btnGetQuote";
+            this.btnGetQuote.Size = new System.Drawing.Size(75, 23);
+            this.btnGetQuote.TabIndex = 7;
+            this.btnGetQuote.Text = "Get Quote";
+            this.btnGetQuote.UseVisualStyleBackColor = true;
+            // 
             // AddQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnGetQuote);
             this.Controls.Add(this.depth);
             this.Controls.Add(this.width);
             this.Controls.Add(this.deliveryTime);
@@ -214,5 +225,6 @@
         private System.Windows.Forms.ComboBox deliveryTime;
         private System.Windows.Forms.NumericUpDown width;
         private System.Windows.Forms.NumericUpDown depth;
+        private System.Windows.Forms.Button btnGetQuote;
     }
 }
