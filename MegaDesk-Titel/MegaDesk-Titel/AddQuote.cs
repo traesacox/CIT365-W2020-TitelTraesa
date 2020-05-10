@@ -59,7 +59,7 @@ namespace MegaDesk_Titel
         {
             //Create Desk ojbect
             int w = int.Parse(width.Text);
-            int d = int.Parse(depth.Text);
+            int d = int.Parse(olddepth.Text);
             int drawer = int.Parse(drawerCount.Text);
             string surface = SurfaceMaterial.Text;
 
@@ -80,50 +80,6 @@ namespace MegaDesk_Titel
 
         private void AddQuote_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void deliveryTime_ValueMemberChanged(object sender, EventArgs e)
-        {
-            Console.WriteLine("You are here");
-            switch (deliveryTime.Text)
-            {
-                case "Rush Order -3 Days(extra charge)":
-                    DeliveryDays.Text = "3";
-                    Console.WriteLine("3 Days");
-                    break;
-                case "Rush Order -5 Days(extra charge)":
-                    DeliveryDays.Text = "5";
-                    break;
-                case "Rush Order -7 Days(extra charge)":
-                    DeliveryDays.Text = "7";
-                    break;
-                case "Normal Order -14 Days(No extra Charge)":
-                    DeliveryDays.Text = "14";
-                    break;
-            }
-
-        }
-
-        private void deliveryTime_TextChanged(object sender, EventArgs e)
-        {
-            Console.WriteLine("You are here");
-            switch (deliveryTime.Text)
-            {
-                case "Rush Order -3 Days(extra charge)":
-                    DeliveryDays.Text = "3";
-                    Console.WriteLine("3 Days");
-                    break;
-                case "Rush Order -5 Days(extra charge)":
-                    DeliveryDays.Text = "5";
-                    break;
-                case "Rush Order -7 Days(extra charge)":
-                    DeliveryDays.Text = "7";
-                    break;
-                case "Normal Order -14 Days(No extra Charge)":
-                    DeliveryDays.Text = "14";
-                    break;
-            }
 
         }
 
@@ -148,6 +104,11 @@ namespace MegaDesk_Titel
                 DeliveryDays.Text = "14";
             }
             
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

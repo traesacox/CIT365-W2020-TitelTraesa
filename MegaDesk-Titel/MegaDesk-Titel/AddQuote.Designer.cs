@@ -41,12 +41,14 @@
             this.SurfaceMaterial = new System.Windows.Forms.ComboBox();
             this.deliveryTime = new System.Windows.Forms.ComboBox();
             this.width = new System.Windows.Forms.NumericUpDown();
-            this.depth = new System.Windows.Forms.NumericUpDown();
+            this.olddepth = new System.Windows.Forms.NumericUpDown();
             this.btnGetQuote = new System.Windows.Forms.Button();
             this.DeliveryDays = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.depth = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.drawerCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.width)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.depth)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.olddepth)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -68,6 +70,7 @@
             this.label1.Size = new System.Drawing.Size(159, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "Customer Full Name:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -164,8 +167,6 @@
             this.deliveryTime.Name = "deliveryTime";
             this.deliveryTime.Size = new System.Drawing.Size(227, 21);
             this.deliveryTime.TabIndex = 6;
-            this.deliveryTime.ValueMemberChanged += new System.EventHandler(this.deliveryTime_ValueMemberChanged);
-            this.deliveryTime.TextChanged += new System.EventHandler(this.deliveryTime_TextChanged);
             this.deliveryTime.Leave += new System.EventHandler(this.deliveryTime_Leave);
             // 
             // width
@@ -176,12 +177,13 @@
             this.width.TabIndex = 2;
             this.width.Validating += new System.ComponentModel.CancelEventHandler(this.width_Validating);
             // 
-            // depth
+            // olddepth
             // 
-            this.depth.Location = new System.Drawing.Point(157, 130);
-            this.depth.Name = "depth";
-            this.depth.Size = new System.Drawing.Size(120, 20);
-            this.depth.TabIndex = 3;
+            this.olddepth.BackColor = System.Drawing.SystemColors.Window;
+            this.olddepth.Location = new System.Drawing.Point(157, 130);
+            this.olddepth.Name = "olddepth";
+            this.olddepth.Size = new System.Drawing.Size(120, 20);
+            this.olddepth.TabIndex = 3;
             // 
             // btnGetQuote
             // 
@@ -200,15 +202,34 @@
             this.DeliveryDays.Size = new System.Drawing.Size(100, 20);
             this.DeliveryDays.TabIndex = 8;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Georgia", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(328, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(325, 56);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Add a Quote";
+            // 
+            // depth
+            // 
+            this.depth.Location = new System.Drawing.Point(303, 133);
+            this.depth.Name = "depth";
+            this.depth.Size = new System.Drawing.Size(100, 20);
+            this.depth.TabIndex = 10;
+            // 
             // AddQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.depth);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.DeliveryDays);
             this.Controls.Add(this.btnGetQuote);
-            this.Controls.Add(this.depth);
+            this.Controls.Add(this.olddepth);
             this.Controls.Add(this.width);
             this.Controls.Add(this.deliveryTime);
             this.Controls.Add(this.SurfaceMaterial);
@@ -226,7 +247,7 @@
             this.Load += new System.EventHandler(this.AddQuote_Load);
             ((System.ComponentModel.ISupportInitialize)(this.drawerCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.width)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.depth)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.olddepth)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,8 +267,10 @@
         private System.Windows.Forms.ComboBox SurfaceMaterial;
         private System.Windows.Forms.ComboBox deliveryTime;
         private System.Windows.Forms.NumericUpDown width;
-        private System.Windows.Forms.NumericUpDown depth;
+        private System.Windows.Forms.NumericUpDown olddepth;
         private System.Windows.Forms.Button btnGetQuote;
         private System.Windows.Forms.TextBox DeliveryDays;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox depth;
     }
 }
