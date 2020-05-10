@@ -15,10 +15,42 @@ namespace MegaDesk_Titel
         public DisplayQuote(Desk desk, DeskQuote quote)
         {
             InitializeComponent();
-            label1.Text="You made it here with" + quote.CustName;
+            name.Text=quote.CustName;
+            width.Text = desk.Width.ToString() + " inches";
+            depth.Text = desk.Depth.ToString() + " inches";
+            drawerCount.Text = desk.DrawerCount.ToString();
+            surfaceMaterial.Text = desk.SurfaceMaterial.ToString();
+            deliveryTime.Text = quote.DeliveryTime.ToString() + " Days";
+            CostBreakDown costDetail = quote.CalcCost(desk, quote);
+            int aCost = costDetail.areaCost;
+            int mCost = costDetail.materialCost;
+            int rCost = costDetail.rushCost;
+            int dCost = costDetail.drawerCost;
+            areaCost.Text = "$" + aCost.ToString();
+            materialCost.Text = "$" + mCost.ToString();
+            rushCost.Text = "$" + rCost.ToString();
+            drawerCost.Text = "$" + dCost.ToString();
+            totalCost.Text = "$" + quote.Cost.ToString();
+            quoteDate.Text = quote.OrderDate.ToString();
+
         }
 
         private void DisplayQuote_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
         {
 
         }

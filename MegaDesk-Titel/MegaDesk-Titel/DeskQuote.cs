@@ -28,7 +28,7 @@ namespace MegaDesk_Titel
            // this.OrderState = Quoted;
 
         }
-        public void CalcCost (Desk desk, DeskQuote quote)
+        public CostBreakDown CalcCost (Desk desk, DeskQuote quote)
         {
             const int baseCost = 200;
             int areaCost = 0;
@@ -115,11 +115,28 @@ namespace MegaDesk_Titel
 
             totalCost = baseCost + areaCost + drawerCost + surfaceCost + deliveryCost;
             this.Cost = totalCost;
+
+            CostBreakDown costDetail = new CostBreakDown(areaCost, surfaceCost, deliveryCost, drawerCost);
+            return costDetail;
         }
 
         
     }
    // enum DeskState
    // { Quoted, Ordered, Manufactured, Delivered };
+   public struct CostBreakDown
+    {
+        public int areaCost;
+        public int materialCost;
+        public int rushCost;
+        public int drawerCost;
 
+        public CostBreakDown(int areaCost, int materialCost, int rushCost, int drawerCost)
+        {
+            this.areaCost = areaCost;
+            this.materialCost = materialCost;
+            this.rushCost = rushCost;
+            this.drawerCost = drawerCost;
+        }
+    }
 }

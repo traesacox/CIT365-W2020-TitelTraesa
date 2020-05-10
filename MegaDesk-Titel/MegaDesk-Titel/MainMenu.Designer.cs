@@ -28,17 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.btnAddQuote = new System.Windows.Forms.Button();
             this.btnViewQuotes = new System.Windows.Forms.Button();
             this.btnSearchQuotes = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddQuote
             // 
-            this.btnAddQuote.Location = new System.Drawing.Point(298, 63);
+            this.btnAddQuote.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddQuote.Location = new System.Drawing.Point(567, 75);
             this.btnAddQuote.Name = "btnAddQuote";
-            this.btnAddQuote.Size = new System.Drawing.Size(75, 23);
+            this.btnAddQuote.Size = new System.Drawing.Size(130, 70);
             this.btnAddQuote.TabIndex = 0;
             this.btnAddQuote.Text = "&Add New Quote";
             this.btnAddQuote.UseVisualStyleBackColor = true;
@@ -46,9 +51,10 @@
             // 
             // btnViewQuotes
             // 
-            this.btnViewQuotes.Location = new System.Drawing.Point(298, 92);
+            this.btnViewQuotes.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewQuotes.Location = new System.Drawing.Point(567, 151);
             this.btnViewQuotes.Name = "btnViewQuotes";
-            this.btnViewQuotes.Size = new System.Drawing.Size(75, 23);
+            this.btnViewQuotes.Size = new System.Drawing.Size(130, 70);
             this.btnViewQuotes.TabIndex = 1;
             this.btnViewQuotes.Text = "&View Quotes";
             this.btnViewQuotes.UseVisualStyleBackColor = true;
@@ -56,9 +62,10 @@
             // 
             // btnSearchQuotes
             // 
-            this.btnSearchQuotes.Location = new System.Drawing.Point(298, 121);
+            this.btnSearchQuotes.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchQuotes.Location = new System.Drawing.Point(567, 227);
             this.btnSearchQuotes.Name = "btnSearchQuotes";
-            this.btnSearchQuotes.Size = new System.Drawing.Size(75, 23);
+            this.btnSearchQuotes.Size = new System.Drawing.Size(130, 70);
             this.btnSearchQuotes.TabIndex = 2;
             this.btnSearchQuotes.Text = "&Search Quotes";
             this.btnSearchQuotes.UseVisualStyleBackColor = true;
@@ -66,26 +73,52 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(298, 150);
+            this.btnExit.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(567, 303);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.Size = new System.Drawing.Size(130, 70);
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "E&xit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(60, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(692, 56);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Mega Desk Quoting System";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(109, 146);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(293, 253);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnSearchQuotes);
             this.Controls.Add(this.btnViewQuotes);
             this.Controls.Add(this.btnAddQuote);
             this.Name = "MainMenu";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -95,6 +128,8 @@
         private System.Windows.Forms.Button btnViewQuotes;
         private System.Windows.Forms.Button btnSearchQuotes;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

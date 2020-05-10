@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddQuote));
             this.btnCancel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -61,60 +62,66 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(47, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 13);
+            this.label1.Size = new System.Drawing.Size(159, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "Customer Full Name:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(47, 83);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 13);
+            this.label2.Size = new System.Drawing.Size(128, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "Width in Inches: ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(47, 132);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 13);
+            this.label3.Size = new System.Drawing.Size(119, 18);
             this.label3.TabIndex = 3;
             this.label3.Text = "Depth in Inches";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(0, 184);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 13);
+            this.label4.Size = new System.Drawing.Size(153, 18);
             this.label4.TabIndex = 4;
             this.label4.Text = "Number of Drawers:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(14, 250);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 13);
+            this.label5.Size = new System.Drawing.Size(130, 18);
             this.label5.TabIndex = 5;
             this.label5.Text = "Surface Material:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(7, 307);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(129, 13);
+            this.label6.Size = new System.Drawing.Size(193, 18);
             this.label6.TabIndex = 6;
             this.label6.Text = "Requested Delivery Time:";
             // 
             // custName
             // 
-            this.custName.Location = new System.Drawing.Point(157, 25);
+            this.custName.Location = new System.Drawing.Point(269, 50);
             this.custName.Name = "custName";
             this.custName.Size = new System.Drawing.Size(126, 20);
             this.custName.TabIndex = 1;
@@ -197,6 +204,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.DeliveryDays);
             this.Controls.Add(this.btnGetQuote);
