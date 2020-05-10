@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MegaDesk_Titel
 {
-    class DeskQuote
+    public class DeskQuote
     {
         //Auto -Implement Data Members
         public string CustName { get; set; }
@@ -18,7 +18,7 @@ namespace MegaDesk_Titel
         //public DeskState OrderState { get; set; }
 
         //Constructor - Create object of Desk Quote
-        DeskQuote (string name, Desk desk, int deliveryTime)
+        public DeskQuote (string name, Desk desk, int deliveryTime)
         {
             this.CustName = name;
             this.desk = desk;

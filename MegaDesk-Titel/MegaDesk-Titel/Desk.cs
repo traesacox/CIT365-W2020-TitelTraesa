@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MegaDesk_Titel
 {
-    class Desk
+    public class Desk
     {
         //Auto -Implement Data Members
         public int Width { get; set; }
@@ -18,16 +18,22 @@ namespace MegaDesk_Titel
         const int MIN_WIDTH = 24;
         const int MAX_DEPTH = 48;
         const int MIN_DEPTH = 12;
+        private int w;
+        private int d;
+        private int drawer;
+        private int surface;
 
-        Desk(int w, int d, int drawers, Material surface)
+        public Desk(int w, int d, int drawers, string surface)
         {
             this.Width = w;
             this.Depth = d;
             this.DrawerCount = drawers;
-            this.SurfaceMaterial = surface;
+           // Material convertSurface = Enum.Parse(Material, surface); 
+            this.SurfaceMaterial =(Material) Enum.Parse(typeof(Material), surface);
         }
 
+     
     }
-    enum Material
+    public enum Material
     { Laminate, Oak, Rosewood, Veneer, Pine};
 }

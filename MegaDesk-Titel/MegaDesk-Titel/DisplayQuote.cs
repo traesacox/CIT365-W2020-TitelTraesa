@@ -12,9 +12,15 @@ namespace MegaDesk_Titel
 {
     public partial class DisplayQuote : Form
     {
-        public DisplayQuote()
+        public DisplayQuote(Desk desk, DeskQuote quote)
         {
             InitializeComponent();
+            label1.Text="You made it here with" + quote.CustName;
+        }
+
+        private void DisplayQuote_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

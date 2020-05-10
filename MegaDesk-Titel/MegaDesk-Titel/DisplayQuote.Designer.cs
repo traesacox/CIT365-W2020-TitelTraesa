@@ -44,10 +44,9 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(159, 190);
+            this.label1.Location = new System.Drawing.Point(153, 190);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(288, 47);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
@@ -169,6 +168,7 @@
             this.Controls.Add(this.label1);
             this.Name = "DisplayQuote";
             this.Text = "DisplayQuote";
+            this.Load += new System.EventHandler(this.DisplayQuote_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

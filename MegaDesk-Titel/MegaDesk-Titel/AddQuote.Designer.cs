@@ -37,11 +37,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.custName = new System.Windows.Forms.TextBox();
             this.drawerCount = new System.Windows.Forms.NumericUpDown();
-            this.cmbxSurfaceMaterial = new System.Windows.Forms.ComboBox();
+            this.SurfaceMaterial = new System.Windows.Forms.ComboBox();
             this.deliveryTime = new System.Windows.Forms.ComboBox();
             this.width = new System.Windows.Forms.NumericUpDown();
             this.depth = new System.Windows.Forms.NumericUpDown();
             this.btnGetQuote = new System.Windows.Forms.Button();
+            this.DeliveryDays = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.drawerCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.width)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.depth)).BeginInit();
@@ -130,19 +131,19 @@
             this.drawerCount.Size = new System.Drawing.Size(120, 20);
             this.drawerCount.TabIndex = 4;
             // 
-            // cmbxSurfaceMaterial
+            // SurfaceMaterial
             // 
-            this.cmbxSurfaceMaterial.FormattingEnabled = true;
-            this.cmbxSurfaceMaterial.Items.AddRange(new object[] {
+            this.SurfaceMaterial.FormattingEnabled = true;
+            this.SurfaceMaterial.Items.AddRange(new object[] {
             "Laminate",
             "Oak",
             "Rosewood",
             "Veneer",
             "Pine"});
-            this.cmbxSurfaceMaterial.Location = new System.Drawing.Point(107, 250);
-            this.cmbxSurfaceMaterial.Name = "cmbxSurfaceMaterial";
-            this.cmbxSurfaceMaterial.Size = new System.Drawing.Size(262, 21);
-            this.cmbxSurfaceMaterial.TabIndex = 5;
+            this.SurfaceMaterial.Location = new System.Drawing.Point(107, 250);
+            this.SurfaceMaterial.Name = "SurfaceMaterial";
+            this.SurfaceMaterial.Size = new System.Drawing.Size(262, 21);
+            this.SurfaceMaterial.TabIndex = 5;
             // 
             // deliveryTime
             // 
@@ -156,6 +157,9 @@
             this.deliveryTime.Name = "deliveryTime";
             this.deliveryTime.Size = new System.Drawing.Size(227, 21);
             this.deliveryTime.TabIndex = 6;
+            this.deliveryTime.ValueMemberChanged += new System.EventHandler(this.deliveryTime_ValueMemberChanged);
+            this.deliveryTime.TextChanged += new System.EventHandler(this.deliveryTime_TextChanged);
+            this.deliveryTime.Leave += new System.EventHandler(this.deliveryTime_Leave);
             // 
             // width
             // 
@@ -180,17 +184,26 @@
             this.btnGetQuote.TabIndex = 7;
             this.btnGetQuote.Text = "Get Quote";
             this.btnGetQuote.UseVisualStyleBackColor = true;
+            this.btnGetQuote.Click += new System.EventHandler(this.btnGetQuote_Click);
+            // 
+            // DeliveryDays
+            // 
+            this.DeliveryDays.Location = new System.Drawing.Point(142, 331);
+            this.DeliveryDays.Name = "DeliveryDays";
+            this.DeliveryDays.Size = new System.Drawing.Size(100, 20);
+            this.DeliveryDays.TabIndex = 8;
             // 
             // AddQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.DeliveryDays);
             this.Controls.Add(this.btnGetQuote);
             this.Controls.Add(this.depth);
             this.Controls.Add(this.width);
             this.Controls.Add(this.deliveryTime);
-            this.Controls.Add(this.cmbxSurfaceMaterial);
+            this.Controls.Add(this.SurfaceMaterial);
             this.Controls.Add(this.drawerCount);
             this.Controls.Add(this.custName);
             this.Controls.Add(this.label6);
@@ -202,6 +215,7 @@
             this.Controls.Add(this.btnCancel);
             this.Name = "AddQuote";
             this.Text = "AddQuote";
+            this.Load += new System.EventHandler(this.AddQuote_Load);
             ((System.ComponentModel.ISupportInitialize)(this.drawerCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.width)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.depth)).EndInit();
@@ -221,10 +235,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox custName;
         private System.Windows.Forms.NumericUpDown drawerCount;
-        private System.Windows.Forms.ComboBox cmbxSurfaceMaterial;
+        private System.Windows.Forms.ComboBox SurfaceMaterial;
         private System.Windows.Forms.ComboBox deliveryTime;
         private System.Windows.Forms.NumericUpDown width;
         private System.Windows.Forms.NumericUpDown depth;
         private System.Windows.Forms.Button btnGetQuote;
+        private System.Windows.Forms.TextBox DeliveryDays;
     }
 }
