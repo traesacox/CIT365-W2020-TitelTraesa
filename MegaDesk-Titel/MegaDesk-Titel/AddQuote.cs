@@ -58,22 +58,29 @@ namespace MegaDesk_Titel
         private void btnGetQuote_Click(object sender, EventArgs e)
         {
             //Create Desk ojbect
-            int w = int.Parse(width.Text);
-            int d = int.Parse(olddepth.Text);
-            int drawer = int.Parse(drawerCount.Text);
             string surface = SurfaceMaterial.Text;
+            try
+            {
+                int w = int.Parse(width.Text);
+                int d = int.Parse(depth.Text);
+                int drawer = int.Parse(drawerCount.Text);
+                Desk desk = new Desk(w, d, drawer, surface);
+                //Create DeskQuote Object
+                string name = custName.Text;
+                int Time = int.Parse(DeliveryDays.Text);
 
-            Desk desk = new Desk (w, d, drawer, surface);
+                DeskQuote quote = new DeskQuote(name, desk, Time);
 
-            //Create DeskQuote Object
-            string name = custName.Text;
-            int Time = int.Parse(DeliveryDays.Text);
-
-            DeskQuote quote = new DeskQuote(name, desk, Time);
-
-            DisplayQuote viewQuote = new DisplayQuote(desk, quote);
-            this.Hide();
-            viewQuote.Show();
+                DisplayQuote viewQuote = new DisplayQuote(desk, quote);
+                this.Hide();
+                viewQuote.Show();
+            }
+            catch (Exception ex)
+            {
+                string error = ex.Message;
+                MessageBox.Show(error);
+            }
+                    
 
 
         }
@@ -108,6 +115,20 @@ namespace MegaDesk_Titel
 
         private void label1_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void Depth_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //char input = Convert.ToChar(depth.Text);
+
+            //if (char.IsControl(input) || !char.IsDigit(input))
+           // {
+             //   MessageBox.Show("You must enter integer only.  Please try again.");
+
+          //  }
+
+
 
         }
     }
