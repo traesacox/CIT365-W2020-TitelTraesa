@@ -5,22 +5,22 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using ScriptureJournal_TraesaTitel.Data;
-using ScriptureJournal_TraesaTitel.Models;
+using ScriptureJournal3_Titel.Data;
+using ScriptureJournal3_Titel.Models;
 
-namespace ScriptureJournal_TraesaTitel.Pages.Scriptures
+namespace ScriptureJournal3_Titel.Pages.Scriptures
 {
     public class DeleteModel : PageModel
     {
-        private readonly ScriptureJournal_TraesaTitel.Models.ScriptureJournal_TraesaTitelContext _context;
+        private readonly ScriptureJournal3_Titel.Data.ScriptureJournal3_TitelContext _context;
 
-        public DeleteModel(ScriptureJournal_TraesaTitel.Models.ScriptureJournal_TraesaTitelContext context)
+        public DeleteModel(ScriptureJournal3_Titel.Data.ScriptureJournal3_TitelContext context)
         {
             _context = context;
         }
 
         [BindProperty]
-        public ScriptureJournal ScriptureJournal { get; set; }
+        public Scripture Scripture { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -29,9 +29,9 @@ namespace ScriptureJournal_TraesaTitel.Pages.Scriptures
                 return NotFound();
             }
 
-            ScriptureJournal = await _context.ScriptureJournal.FirstOrDefaultAsync(m => m.ID == id);
+            Scripture = await _context.Scripture.FirstOrDefaultAsync(m => m.ID == id);
 
-            if (ScriptureJournal == null)
+            if (Scripture == null)
             {
                 return NotFound();
             }
@@ -45,11 +45,11 @@ namespace ScriptureJournal_TraesaTitel.Pages.Scriptures
                 return NotFound();
             }
 
-            ScriptureJournal = await _context.ScriptureJournal.FindAsync(id);
+            Scripture = await _context.Scripture.FindAsync(id);
 
-            if (ScriptureJournal != null)
+            if (Scripture != null)
             {
-                _context.ScriptureJournal.Remove(ScriptureJournal);
+                _context.Scripture.Remove(Scripture);
                 await _context.SaveChangesAsync();
             }
 

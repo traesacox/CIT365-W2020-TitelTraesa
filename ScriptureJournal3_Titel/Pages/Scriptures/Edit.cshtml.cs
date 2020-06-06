@@ -6,22 +6,22 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using ScriptureJournal_TraesaTitel.Data;
-using ScriptureJournal_TraesaTitel.Models;
+using ScriptureJournal3_Titel.Data;
+using ScriptureJournal3_Titel.Models;
 
-namespace ScriptureJournal_TraesaTitel.Pages.Scriptures
+namespace ScriptureJournal3_Titel.Pages.Scriptures
 {
     public class EditModel : PageModel
     {
-        private readonly ScriptureJournal_TraesaTitel.Models.ScriptureJournal_TraesaTitelContext _context;
+        private readonly ScriptureJournal3_Titel.Data.ScriptureJournal3_TitelContext _context;
 
-        public EditModel(ScriptureJournal_TraesaTitel.Models.ScriptureJournal_TraesaTitelContext context)
+        public EditModel(ScriptureJournal3_Titel.Data.ScriptureJournal3_TitelContext context)
         {
             _context = context;
         }
 
         [BindProperty]
-        public ScriptureJournal ScriptureJournal { get; set; }
+        public Scripture Scripture { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -30,9 +30,9 @@ namespace ScriptureJournal_TraesaTitel.Pages.Scriptures
                 return NotFound();
             }
 
-            ScriptureJournal = await _context.ScriptureJournal.FirstOrDefaultAsync(m => m.ID == id);
+            Scripture = await _context.Scripture.FirstOrDefaultAsync(m => m.ID == id);
 
-            if (ScriptureJournal == null)
+            if (Scripture == null)
             {
                 return NotFound();
             }
@@ -48,7 +48,7 @@ namespace ScriptureJournal_TraesaTitel.Pages.Scriptures
                 return Page();
             }
 
-            _context.Attach(ScriptureJournal).State = EntityState.Modified;
+            _context.Attach(Scripture).State = EntityState.Modified;
 
             try
             {
@@ -56,7 +56,7 @@ namespace ScriptureJournal_TraesaTitel.Pages.Scriptures
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ScriptureJournalExists(ScriptureJournal.ID))
+                if (!ScriptureExists(Scripture.ID))
                 {
                     return NotFound();
                 }
@@ -69,9 +69,9 @@ namespace ScriptureJournal_TraesaTitel.Pages.Scriptures
             return RedirectToPage("./Index");
         }
 
-        private bool ScriptureJournalExists(int id)
+        private bool ScriptureExists(int id)
         {
-            return _context.ScriptureJournal.Any(e => e.ID == id);
+            return _context.Scripture.Any(e => e.ID == id);
         }
     }
 }

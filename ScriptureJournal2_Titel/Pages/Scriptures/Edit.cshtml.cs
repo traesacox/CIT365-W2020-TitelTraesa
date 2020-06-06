@@ -6,16 +6,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using ScriptureJournal_TraesaTitel.Data;
-using ScriptureJournal_TraesaTitel.Models;
+using ScriptureJournal2_Titel.Models;
 
-namespace ScriptureJournal_TraesaTitel.Pages.Scriptures
+namespace ScriptureJournal2_Titel.Pages.Scriptures
 {
     public class EditModel : PageModel
     {
-        private readonly ScriptureJournal_TraesaTitel.Models.ScriptureJournal_TraesaTitelContext _context;
+        private readonly ScriptureJournal2_Titel.Models.ScriptureJournal2_TitelContext _context;
 
-        public EditModel(ScriptureJournal_TraesaTitel.Models.ScriptureJournal_TraesaTitelContext context)
+        public EditModel(ScriptureJournal2_Titel.Models.ScriptureJournal2_TitelContext context)
         {
             _context = context;
         }

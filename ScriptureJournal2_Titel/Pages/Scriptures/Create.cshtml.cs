@@ -5,16 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using ScriptureJournal_TraesaTitel.Data;
-using ScriptureJournal_TraesaTitel.Models;
+using ScriptureJournal2_Titel.Models;
 
-namespace ScriptureJournal_TraesaTitel.Pages.Scriptures
+namespace ScriptureJournal2_Titel.Pages.Scriptures
 {
     public class CreateModel : PageModel
     {
-        private readonly ScriptureJournal_TraesaTitel.Models.ScriptureJournal_TraesaTitelContext _context;
+        private readonly ScriptureJournal2_Titel.Models.ScriptureJournal2_TitelContext _context;
 
-        public CreateModel(ScriptureJournal_TraesaTitel.Models.ScriptureJournal_TraesaTitelContext context)
+        public CreateModel(ScriptureJournal2_Titel.Models.ScriptureJournal2_TitelContext context)
         {
             _context = context;
         }
