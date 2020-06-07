@@ -13,10 +13,10 @@
 
         <form>
             <p class="filter-heading">
-                <div>Search by Book:</div> <select asp-for="ScriptureBook" asp-items="Model.Books">
+                Search by Book: <select asp-for="ScriptureBook" asp-items="Model.Books">
                     <option value="">All</option>
                 </select>
-               <div> Notes Keyword: </div><input type="text" asp-for="SearchString" />
+               <br> Notes Keyword:<input type="text" asp-for="SearchString" />
                 <input type="submit" value="Filter" />
             </p>
         </form>
@@ -37,7 +37,7 @@
                     </th>
                     <th class="table-heading">
                         @Html.DisplayNameFor(model => model.Scripture[0].Notes)
-                        </thclass=>
+                        </th>
                     <th>
                         <a asp-page="./Index" asp-route-sortOrder="@Model.DateSort">
                             @Html.DisplayNameFor(model => model.Scripture[0].DateAdded)

@@ -7,9 +7,6 @@ Headings: font-family: 'Fondamento', cursive;
 Nav bar and accents: font-family: 'Italianno', cursive;
 */
 
-.nav-container {
-    background-color: #FFC861;
-}
 
 a.navbar-brand {
     white-space: normal;
@@ -27,7 +24,7 @@ a {
 
 .btn-primary {
     color: #305380;
-    background-color: #1b6ec2;
+    background-color: #FFC861;
     border-color: #1861ac;
 }
 
@@ -47,7 +44,14 @@ td {
     font-family: 'Alice', serif;
     color: white;
 }
-
+h1, h2, h3, h4, h5 {
+    color: #FFC861;
+    font-family: 'Fondamento', cursive;
+}
+label {
+    color: white;
+    font-family: 'Fondamento', cursive;
+}
 .container {
     background-color: #576880;
 }
@@ -56,6 +60,25 @@ td {
     font-size: 1.15rem;
     color: #FFC861;
 }
+.filter-heading {
+    color: white !important;
+    font-family: 'Fondamento', cursive;
+}
+
+#verify {
+    color: red !important;
+}
+dt {
+    color: white;
+    font-family: 'Fondamento', cursive;
+}
+dd {
+    color: white;
+    font-family: 'Alice', serif;
+}
+.footer-info{
+    color:white;
+
 }
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -63,9 +86,11 @@ html {
     font-size: 14px;
 }
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
+
+   
 }
 
 .border-top {
@@ -101,4 +126,22 @@ body {
   width: 100%;
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
+}
+@media only screen and (max-device-width: 480px) {
+
+    .table thead th {
+        font-family: 'Fondamento', cursive;
+        font-size: .75rem;
+        color: #FFC861;
+    }
+    td{
+        font-size:.75rem;
+    }
+    a {
+        font-size:.75rem;
+    }
+
+
+
+
 }
