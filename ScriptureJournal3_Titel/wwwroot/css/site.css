@@ -1,33 +1,66 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+/*Font for Site
+Paragraphs & Text    font-family: 'Alice', serif;
+Headings: font-family: 'Fondamento', cursive;
+Nav bar and accents: font-family: 'Italianno', cursive;
+*/
+
+.nav-container {
+    background-color: #FFC861;
+}
+
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
 }
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+    color: #FFC861;
+    font-family: 'Fondamento', cursive;
+    font-size: 1.25rem;
+    text-decoration:underline;
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #305380;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #e5e5e5;
+    background-color: white;
+    border-color: #1861ac;
 }
 
+th .table-heading {
+    font-family:'Fondamento', cursive;
+    font-size: 1.5rem;
+    color: #FFC861;
+}
+
+td {
+    font-family: 'Alice', serif;
+    color: white;
+}
+
+.container {
+    background-color: #576880;
+}
+.table thead th{
+    font-family:'Fondamento', cursive;
+    font-size: 1.15rem;
+    color: #FFC861;
+}
+}
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 @media (min-width: 768px) {
   html {

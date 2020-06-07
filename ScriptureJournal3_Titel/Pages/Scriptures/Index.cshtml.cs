@@ -29,14 +29,41 @@ namespace ScriptureJournal3_Titel.Pages.Scriptures
         [BindProperty(SupportsGet =true)]
         public string ScriptureBook { get; set; }
         
+        //Adding Sort functionality
+        public string BookSort { get; set; }
+        public string DateSort { get; set; }
 
-        public async Task OnGetAsync()
+        public string CurrentSort { get; set; }
+        public async Task OnGetAsync( string sortOrder)
 
         {
-            //Use Linq to get list of books
+            BookSort = String.IsNullOrEmpty(sortOrder) ? "book_desc" : "";
+
+            DateSort = sortOrder == "Date" ? "date_desc" : "Date";
+           
+
+            //Use Linq to get list of books that retrieves all the books from the database
             IQueryable<string> bookQuery = from s in _context.Scripture orderby s.Book select s.Book;
 
-            var scriptures = from s in _context.Scripture select s;
+           
+            //Create a complete quearable list of all entries to sort and then filter
+            IQueryable <Scripture> scriptures = from s in _context.Scripture select s;
+
+            switch (sortOrder)
+            {
+                case "book_desc":
+                    scriptures = scriptures.OrderByDescending(s => s.Book);
+                    break;
+                case "Date":
+                    scriptures = scriptures.OrderBy(s => s.DateAdded);
+                    break;
+                case "date_desc":
+                    scriptures = scriptures.OrderByDescending(s => s.DateAdded);
+                    break;
+                default:
+                    scriptures = scriptures.OrderBy(s => s.Book);
+                    break;
+            }
 
             if(!string.IsNullOrEmpty(SearchString))
             {
@@ -47,6 +74,8 @@ namespace ScriptureJournal3_Titel.Pages.Scriptures
             {
                 scriptures = scriptures.Where(x => x.Book == ScriptureBook);
             }
+            //Makes a list of Distrinct Book - no duplicates
+            Books = new SelectList(await bookQuery.Distinct().ToListAsync());
 
             Scripture = await scriptures.ToListAsync();
         }
