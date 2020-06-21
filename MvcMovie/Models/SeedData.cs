@@ -25,7 +25,7 @@ namespace MvcMovie.Models
                     {
                         Title = "17 Miracles",
                         ReleaseDate = DateTime.Parse("2011-6-03"),
-                        Genre = "Adventure/History",
+                        Genre = "History",
                         Price = 12.99M,
                         Rating = "PG"
                     },

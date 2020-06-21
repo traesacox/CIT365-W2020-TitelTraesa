@@ -1,6 +1,20 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+/*-------------Fonts
+font-family: 'Luckiest Guy', cursive; -Heading
+font-family: 'Orbitron', sans-serif; - nav & subheading 
+font-family: 'Play', sans-serif; - Text content
+*/
+
+body {
+    background-image: url('imageBackground.jpg');
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
+    padding: 0em !important;
+}
+
 a.navbar-brand {
   white-space: normal;
   text-align: center;

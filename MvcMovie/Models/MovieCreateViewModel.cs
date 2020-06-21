@@ -1,13 +1,17 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace MvcMovie.Models
 {
-    public class Movie
+    public class MovieCreateViewModel
     {
         public int Id { get; set; }
-
         [StringLength(60, MinimumLength = 3)]
         [Required]
         public string Title { get; set; }
@@ -31,6 +35,13 @@ namespace MvcMovie.Models
         [Required]
         public string Rating { get; set; }
 
+        public IFormFile Photo { get; set; }
+
         public string PhotoPath { get; set; }
+
+        public List<Movie> Movies { get; set; }
+        public SelectList Genres { get; set; }
+        public string MovieGenre { get; set; }
+        public string SearchString { get; set; }
     }
 }
