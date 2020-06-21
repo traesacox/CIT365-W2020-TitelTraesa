@@ -103,7 +103,7 @@ namespace MvcMovie.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
        //Old One ---- public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price,Rating,PhotoPath")] Movie movie)
-        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price,Rating,PhotoPath")]MovieCreateViewModel model)
+        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price,Rating,PhotoPath,Photo")]MovieCreateViewModel model)
         {
             if (ModelState.IsValid)
             {
@@ -116,6 +116,7 @@ namespace MvcMovie.Controllers
                     model.Photo.CopyTo(new FileStream(filePath, FileMode.Create));
 
                 }
+ 
 
                 Movie movie = new Movie
                 {
@@ -165,64 +166,34 @@ namespace MvcMovie.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price,Rating")] Movie movie)
-
         {
-
             if (id != movie.Id)
-
             {
-
                 return NotFound();
-
             }
-
-
 
             if (ModelState.IsValid)
-
             {
-
                 try
-
                 {
-
                     _context.Update(movie);
-
                     await _context.SaveChangesAsync();
-
                 }
-
                 catch (DbUpdateConcurrencyException)
-
                 {
-
                     if (!MovieExists(movie.Id))
-
                     {
-
                         return NotFound();
-
                     }
-
                     else
-
                     {
-
                         throw;
-
                     }
-
                 }
-
                 return RedirectToAction(nameof(Index));
-
             }
-
             return View(movie);
-
         }
-
-
 
         // GET: Movies/Delete/5
         public async Task<IActionResult> Delete(int? id)
