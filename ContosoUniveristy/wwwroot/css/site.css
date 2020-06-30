@@ -10,6 +10,7 @@ a.navbar-brand {
     text-align: center;
     word-break: break-all;
     font-family: 'Raleway', sans-serif;
+    
 }
 
 /* Provide sufficient contrast against white background */
@@ -25,15 +26,18 @@ a {
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+    font-family: 'Raleway', sans-serif;
 }
-
+.navWrapper{
+    background-color:firebrick;
+}
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 @media (min-width: 768px) {
   html {
