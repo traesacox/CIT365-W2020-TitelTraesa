@@ -1,15 +1,21 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+/*Headings - font-family: 'Cinzel', serif;
+Text Paragraphs - font-family: 'Philosopher', sans-serif;
+Accents - navigation font-family: 'Raleway', sans-serif;*/
+
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+    font-family: 'Raleway', sans-serif;
 }
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+    color: #0366d6;
+    font-family: 'Raleway', sans-serif;
 }
 
 .btn-primary {
@@ -63,9 +69,102 @@ body {
   margin-bottom: 60px;
 }
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    font-family: 'Raleway', sans-serif;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+/*Home Page*/
+.homeBanner {
+    font-family: 'Cinzel', serif;
+    color:firebrick;
+    text-align:center;
+}
+
+.homeWrapper {
+    /*font-family: 'Lato', sans-serif;*/
+    font-size: 125%;
+    font-weight: bolder;
+    background-image: url('../images/collegeCampus.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 0em !important;
+}
+.infoBox_Home{
+    color:antiquewhite;
+    background-color:firebrick;
+    padding: 7px;
+    
+}
+h1, h2, h3, h4 {
+    font-family: 'Cinzel', serif; 
+    font-size:1.75rem;
+}
+p {
+    font-family: 'Philosopher', sans-serif;
+}
+.col-md-6 {
+    margin: 10px;
+}
+
+/*About Page*/
+.aboutWrapper {
+    background-image: url('../images/throughHat.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 0em !important;
+    color: white;
+}
+
+.pagesWrapper {
+    /*background-image: url('../images/textureBack.jpg');
+    //background-repeat: no-repeat;
+    //background-attachment: fixed;
+    */background-size: cover;
+    background-color:firebrick;
+    padding: 0em !important;
+    color: white;
+
+}
+
+.table thead th{
+    color:white;
+}
+
+.table td, .table th {
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+}
+
+.detailWrapper {
+    background-image: url('../images/throughHat.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+     background-size: cover;
+   
+    padding: 0em !important;
+    color: white;
+}
+
+.editWrapper {
+    background-image: url('../images/pencil.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 0em !important;
+    color: white;
+}
+
+.infoBox_Edit{
+    margin-left:100px;
+}
+
+.chkDelete h3{
+    color:firebrick;
+    font-size:.85rem;
 }

@@ -4,27 +4,54 @@
     ViewData["Title"] = "Student Body Statistics";
 }
 
-<h2>Student Body Statistics</h2>
+    <div class="aboutWrapper">
+        <div class="row">
+            <div class="col-md-4">
 
-<table>
-    <tr>
-        <th>
-            Enrollment Date
-        </th>
-        <th>
-            Students
-        </th>
-    </tr>
+                <h2>Student Body Statistics</h2>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.EnrollmentDate)
-            </td>
-            <td>
-                @item.StudentCount
-            </td>
-        </tr>
-    }
-</table>
+                <table>
+                    <tr>
+                        <th>
+                            Enrollment Date
+                        </th>
+                        <th>
+                            Students
+                        </th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EnrollmentDate)
+                            </td>
+                            <td>
+                                @item.StudentCount
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </div>
+            <div class="col-md-4">
+                <h2>Contact Information</h2>
+                <p>For information regarding Contoso University, please use the following contacts</p>
+                <h5>Enrollemnt and Registration</h5>
+                <p>
+                    Phone: 800-400-5678<br />
+                    Email:registration@ConstosoU.edu
+                </p>
+                <h5>Advising</h5>
+                <p>
+                    Phone: 800-400-4111<br />
+                    Email:Advising@ConstosoU.edu
+                </p>
+                <h5>Website questions</h5>
+                <p>
+                    Traesa Titel
+                    Phone: 800-400-2120<br />
+                    Email:websiteAdmin@ConstosoU.edu
+                </p>
+            </div>
+        </div>
+    </div>
