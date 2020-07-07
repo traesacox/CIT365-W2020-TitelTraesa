@@ -28,7 +28,7 @@ namespace BooksApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.Configure<BookstoreDatabaseSettings>(
-        Configuration.GetSection(nameof(BookstoreDatabaseSettings)));
+                Configuration.GetSection(nameof(BookstoreDatabaseSettings)));
 
             services.AddSingleton<IBookstoreDatabaseSettings>(sp =>
                 sp.GetRequiredService<IOptions<BookstoreDatabaseSettings>>().Value);
@@ -36,8 +36,8 @@ namespace BooksApi
             services.AddSingleton<BookService>();
 
             services.AddMvc()
-                //.AddJsonOptions(options => options.UseMemberCasing())
-                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+                  // .AddJsonOptions(options => options.UseMemberCasing())
+                    .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
